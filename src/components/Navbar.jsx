@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ user, logOut }) => {
@@ -17,10 +17,11 @@ const Navbar = ({ user, logOut }) => {
   return (
     <div className="sm:flex sm:items-center sm:justify-between p-4 w-full absolute z-[100]">
       {/* Logo  */}
-
-      <h1 className="text-[#ff833c] text-4xl font-bold cursor-pointer">
-        MOOVOLIO
-      </h1>
+      <Link>
+        <h1 className="text-[#ff833c] text-4xl font-bold cursor-pointer">
+          MOOVOLIO
+        </h1>
+      </Link>
 
       {/* Account or Home page with Login/Signup button  */}
 
