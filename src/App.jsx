@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "./firebase";
-import Navbar from "./components/Navbar";
+import ResponsiveNavbar from "./components/ResponsiveNavbar";
 
 function App() {
   // State
@@ -46,10 +46,10 @@ function App() {
 
   return (
     <div className="text-white">
-      <Navbar />
+      <ResponsiveNavbar user={user} logOut={logOut} />
 
       <Routes>
-        <Route path="/" element={<Home user={user} logOut={logOut} />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   );
