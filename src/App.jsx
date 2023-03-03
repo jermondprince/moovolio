@@ -50,7 +50,7 @@ function App() {
   }, []);
 
   return (
-    <div className="text-white">
+    <div>
       <ResponsiveNavbar user={user} logOut={logOut} />
 
       <Routes>

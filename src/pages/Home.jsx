@@ -1,13 +1,14 @@
 import React from "react";
 import Main from "../components/Main";
 import Row from "../components/Row";
+import SearchBar from "../components/SearchBar";
 import requests from "../Requests";
 
 const Home = ({ user }) => {
   return (
     <div className="scrollbar-hide">
       <Main />
-
+      <SearchBar />
       <Row
         user={user}
         rowID="1"
