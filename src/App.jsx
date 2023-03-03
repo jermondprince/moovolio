@@ -13,6 +13,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Account from "./pages/Account";
 
 function App() {
   // State
@@ -59,6 +61,14 @@ function App() {
           element={<SignUp user={user} signUp={signUp} />}
         />
         <Route path="/login" element={<Login user={user} logIn={logIn} />} />
+        <Route
+          path="/account"
+          element={
+            <ProtectedRoute user={user}>
+              <Account />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </div>
   );
