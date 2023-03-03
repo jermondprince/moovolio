@@ -54,7 +54,7 @@ function App() {
       <ResponsiveNavbar user={user} logOut={logOut} />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user} />} />
         <Route path="/about" element={<About />} />
         <Route
           path="/signup"
