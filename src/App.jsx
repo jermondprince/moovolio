@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
@@ -10,6 +9,10 @@ import {
 import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "./firebase";
 import ResponsiveNavbar from "./components/ResponsiveNavbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 
 function App() {
   // State
@@ -51,6 +54,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route
+          path="/signup"
+          element={<SignUp user={user} signUp={signUp} />}
+        />
+        <Route path="/login" element={<Login user={user} logIn={logIn} />} />
       </Routes>
     </div>
   );
