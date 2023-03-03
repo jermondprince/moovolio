@@ -15,7 +15,10 @@ const Navbar = ({ user, logOut }) => {
   };
 
   return (
-    <div className="sm:flex sm:items-center sm:justify-between p-4 w-full absolute z-[100]">
+    <div
+      data-testid="navbar"
+      className="sm:flex sm:items-center sm:justify-between p-4 w-full absolute z-[100]"
+    >
       {/* Logo  */}
       <Link>
         <h1 className="text-[#ff833c] text-4xl font-bold cursor-pointer">

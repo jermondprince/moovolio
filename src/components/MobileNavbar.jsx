@@ -18,7 +18,7 @@ const MobileNavbar = ({ user, logOut }) => {
     }
   };
   return (
-    <div className="w-full h-full relative z-[100]">
+    <div data-testid="mobile-navbar" className="w-full h-full relative z-[100]">
       {/* Logo  */}
       <Link className="p-4 fixed" to="/">
         <h1 className="text-[#ff833c] text-4xl font-bold cursor-pointer">
