@@ -5,6 +5,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const Row = ({ title, fetchURL, rowID, user }) => {
   const [movies, setMovies] = useState([]);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     axios.get(fetchURL).then((response) => {
@@ -19,6 +20,10 @@ const Row = ({ title, fetchURL, rowID, user }) => {
   const slideRight = () => {
     let slider = document.getElementById("slider" + rowID);
     slider.scrollLeft = slider.scrollLeft + 500;
+  };
+
+  const handleActive = () => {
+    setIsActive(!isActive);
   };
 
   return (
@@ -40,7 +45,14 @@ const Row = ({ title, fetchURL, rowID, user }) => {
                 movie.backdrop_path !== null && movie.media_type !== "person"
             )
             .map((movie, id) => (
-              <Movie key={id} movie={movie} user={user} />
+              <Movie
+                key={id}
+                movie={movie}
+                user={user}
+                handleActive={handleActive}
+                isActive={isActive}
+                setIsActive={setIsActive}
+              />
             ))}
         </div>
         <MdChevronRight

@@ -4,17 +4,17 @@ import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-const Movie = ({ movie, user }) => {
+const Movie = ({ movie, user, isActive, setIsActive, handleActive }) => {
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
 
   const movieID = doc(db, "users", `${user?.email}`);
 
-  const handleActive = () => {
-    setIsActive(!isActive);
-  };
+  // const handleActive = () => {
+  //   setIsActive(!isActive);
+  // };
 
   const saveShow = async () => {
     if (user?.email) {
@@ -52,6 +52,7 @@ const Movie = ({ movie, user }) => {
           </p>
           <p
             onClick={handleActive}
+            data-testid="description"
             className={`whitespace-normal text-[10px] md:text-sm font-bold h-full text-center flex justify-center items-center ${
               isActive === false ? "hidden " : ""
             }`}
