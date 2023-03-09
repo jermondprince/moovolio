@@ -10,7 +10,7 @@ const SearchBar = () => {
   const [movies, setMovies] = useState([]);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  const key = "63068768c76833b0b434e24b7f444698";
+  const key = process.env.REACT_APP_MOVIEDATABASE_API_KEY;
   const searchRequest = `https://api.themoviedb.org/3/search/multi?api_key=${key}&language=en-US&query=${search}&page=1&include_adult=false`;
 
   useEffect(() => {

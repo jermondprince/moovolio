@@ -7,14 +7,9 @@ import { useNavigate } from "react-router-dom";
 const Movie = ({ movie, user, isActive, setIsActive, handleActive }) => {
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
-  // const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
 
   const movieID = doc(db, "users", `${user?.email}`);
-
-  // const handleActive = () => {
-  //   setIsActive(!isActive);
-  // };
 
   const saveShow = async () => {
     if (user?.email) {
@@ -28,7 +23,6 @@ const Movie = ({ movie, user, isActive, setIsActive, handleActive }) => {
         }),
       });
     } else {
-      // alert("Please log in to save a movie");
       navigate("/signup");
     }
   };

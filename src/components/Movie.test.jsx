@@ -5,7 +5,6 @@ import "@testing-library/jest-dom/";
 
 describe("Movie Test", () => {
   it("should render movie description", () => {
-    // Arrange
     const movie = {
       title: "The Movie",
       overview: "This is the description of the movie",
@@ -18,7 +17,6 @@ describe("Movie Test", () => {
     );
     const titleElement = screen.getByText(movie.title);
 
-    // Act
     fireEvent.click(titleElement);
 
     expect(screen.getByTestId("description")).toBeInTheDocument();
