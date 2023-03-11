@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/moovolio/static/css/main.a76b5a84.css",
+    "main.js": "/moovolio/static/js/main.3ee09dde.js",
+    "static/media/reels.jpg": "/moovolio/static/media/reels.ed428e644aa519d4820d.jpg",
+    "static/media/reels5.jpg": "/moovolio/static/media/reels5.465873a2380bee5d6912.jpg",
+    "static/media/reels2.jpg": "/moovolio/static/media/reels2.0e9c50001e36b53e8a5a.jpg",
+    "static/media/reels3.jpg": "/moovolio/static/media/reels3.3c82d71e8dc39215fecf.jpg",
+    "index.html": "/moovolio/index.html",
+    "main.a76b5a84.css.map": "/moovolio/static/css/main.a76b5a84.css.map",
+    "main.3ee09dde.js.map": "/moovolio/static/js/main.3ee09dde.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a76b5a84.css",
+    "static/js/main.3ee09dde.js"
+  ]
+}
