@@ -20,7 +20,7 @@ const Navbar = ({ user, logOut }) => {
       className="sm:flex sm:items-center sm:justify-between p-4 w-full absolute z-[100]"
     >
       {/* Logo  */}
-      <Link>
+      <Link to="/">
         <h1 className="text-[#ff833c] text-4xl font-bold cursor-pointer">
           MOOVOLIO
         </h1>
